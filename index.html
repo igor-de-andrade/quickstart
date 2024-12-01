@@ -5,16 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuickStart</title>
     <link rel="stylesheet" href="./styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <header class="headerx">
-            <img src="./assets/logo.svg" class="logo"></img>
-        </header>
+    <header>
+        <img src="./assets/logo.svg" class="logo"></img>
+    </header>
+    <main class="teste">
         <form class="new-page-form">
             <input type="text" class="new-page-form__input" id="iptDescricao" placeholder="Digite aqui a descrição da página">
             <input type="text" class="new-page-form__input" id="iptUrl" placeholder="Digite aqui a URL da página">
-            <button class="new-page-form__button" id="btnSalvar">Salvar</button>
+            <div class="new-page-form__buttons">
+                <button class="new-page-form__button button-primary" id="btnSalvar">
+                    <!img src="./assets/save-icon.svg" class="new-page-form__button__icon">
+                    Salvar
+                </button>
+                <button class="new-page-form__button button-secundary" id="btnCancelar">
+                    Cancelar
+                </button>
+            </div>
         </form>
 
         <div class="pages-list">
@@ -25,11 +37,9 @@
                 </a>
             </div>
         </div>
-
-        <footer>
-
-        </footer>
     </main>
+    <footer>
+    </footer>
     <script type="module" src="./js/scripts.js"></script>
 </body>
 

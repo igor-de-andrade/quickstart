@@ -3,6 +3,7 @@
     --secundary-color: #3C3D37;
     --terciary-color: #697565;
     --neutral-color: #ECDFCC;
+    --text-font: "Parkinsans", sans-serif;
 }
 
 html {
@@ -14,6 +15,12 @@ header {
     text-align: center;
 }
 
+.teste {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .logo {
     width: 50%;
 }
@@ -21,10 +28,42 @@ header {
 .new-page-form {
     display: flex;
     flex-direction: column;
+    width: 50%;
+    gap: 15px;
 }
 
 .new-page-form__input {
+    padding: 5px;
+    font-size: 14px;
+    font-family: var(--text-font);
+}
 
+.new-page-form__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 10px;
+}
+
+.new-page-form__button {
+    padding: 5px;
+    font-family: var(--text-font);
+    font-size: 14px;
+    width: 50%;
+}
+
+.button-primary {
+    background-color: var(--terciary-color);
+    color: var(--neutral-color);
+}
+
+.button-secundary {
+    background-color: var(--neutral-color);
+    color: var(--terciary-color);
+}
+
+.new-page-form__button__icon {
+    width: 18px;
 }
 
 .pages-list {
