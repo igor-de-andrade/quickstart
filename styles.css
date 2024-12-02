@@ -1,8 +1,13 @@
 :root {
-    --primary-color: #1E201E;
-    --secundary-color: #3C3D37;
-    --terciary-color: #697565;
-    --neutral-color: #ECDFCC;
+    --primary-color: #222831;
+    --secundary-color: #393E46;
+    --secundary-color-hover: #57585a;
+    --terciary-color: #FFD369;
+    --terciary-color-hover: #e9b12e;
+    --quaternary-color: #EEEEEE;
+    --quaternary-color-hover: #eeeeeec5;
+    --neutral-color: #ffffff;
+    --black-color: #000000;
     --text-font: "Parkinsans", sans-serif;
 }
 
@@ -36,6 +41,7 @@ header {
     padding: 5px;
     font-size: 14px;
     font-family: var(--text-font);
+    border-radius: 4px;
 }
 
 .new-page-form__buttons {
@@ -51,19 +57,31 @@ header {
     justify-content: center;
     gap: 8px;
     padding: 5px;
+    border-style: solid;
+    border-width: 1px;
     font-family: var(--text-font);
     font-size: 14px;
     width: 50%;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
 .button-primary {
     background-color: var(--terciary-color);
-    color: var(--neutral-color);
+    color: var(--black-color);
+}
+
+.button-primary:hover {
+    background-color: var(--terciary-color-hover);
 }
 
 .button-secundary {
-    background-color: var(--neutral-color);
-    color: var(--primary-color);
+    background-color: var(--quaternary-color);
+    color: var(--black-color);
+}
+
+.button-secundary:hover {
+    background-color: var(--quaternary-color-hover);
 }
 
 .new-page-form__button__icon {
@@ -87,16 +105,13 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-style: solid;
-    border-color: var(--neutral-color);
     border-radius: 8px;
-    border-width: 1px;
     background-color: var(--secundary-color);
     text-decoration: none;
 }
 
 .page__card:hover {
-    background-color: var(--terciary-color);
+    background-color: var(--secundary-color-hover);
 }
 
 .page__card__description {
