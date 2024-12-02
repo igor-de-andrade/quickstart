@@ -3,20 +3,22 @@ const iptUrl = document.querySelector('#iptUrl')
 const btnSalvar = document.querySelector('#btnSalvar')
 const listaDePaginas = document.querySelector('.pages-list')
 
-let paginas = []
+let paginas = JSON.parse(localStorage.getItem('paginas')) || []
+
+function atualizarPaginas() {
+    localStorage.setItem('paginas', JSON.stringify(paginas))
+}
 
 btnSalvar.addEventListener('click', salvarPagina)
 
 function salvarPagina(event) {
-    event.preventDefault()
-
     const pagina = {
         descricao: iptDescricao.value,
         url: iptUrl.value
     }
 
-    criarPagina(pagina)
-
+    paginas.push(pagina)
+    atualizarPaginas()
 }
 
 function criarPagina(pagina) {
@@ -42,4 +44,14 @@ function criarPagina(pagina) {
 
     
     listaDePaginas.appendChild(page)
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderizarPaginas()
+})
+
+function renderizarPaginas() {
+    paginas.forEach(pagina => {
+        criarPagina(pagina)
+    })
 }

@@ -46,6 +46,10 @@ header {
 }
 
 .new-page-form__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
     padding: 5px;
     font-family: var(--text-font);
     font-size: 14px;
@@ -59,7 +63,7 @@ header {
 
 .button-secundary {
     background-color: var(--neutral-color);
-    color: var(--terciary-color);
+    color: var(--primary-color);
 }
 
 .new-page-form__button__icon {
