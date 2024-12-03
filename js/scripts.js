@@ -12,9 +12,12 @@ function atualizarPaginas() {
 btnSalvar.addEventListener('click', salvarPagina)
 
 function salvarPagina(event) {
+    const iconAddress = getIconAddress(iptUrl.value)
+
     const pagina = {
         descricao: iptDescricao.value,
-        url: iptUrl.value
+        url: iptUrl.value,
+        iconAddress: iconAddress
     }
 
     paginas.push(pagina)
@@ -31,7 +34,7 @@ function criarPagina(pagina) {
     pageCard.target = '_blank'
 
     const pageCardImage = document.createElement('img')
-    pageCardImage.src = './assets/page.png'
+    pageCardImage.src = `${pagina.iconAddress}`
     pageCardImage.classList.add('page__card__image')
 
     const pageCardDescription = document.createElement('p')
@@ -54,4 +57,9 @@ function renderizarPaginas() {
     paginas.forEach(pagina => {
         criarPagina(pagina)
     })
+}
+
+function getIconAddress(inputUrl) {
+    const iconAddress = `https://www.google.com/s2/favicons?sz=64&domain=${inputUrl}`
+    return iconAddress
 }
