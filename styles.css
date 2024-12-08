@@ -101,6 +101,42 @@ header {
     width: 150px;
 }
 
+.page__dropdown__button {
+    background-color: var(--primary-color);
+    color: var(--terciary-color);
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.page__dropdown__button:hover {
+    background-color: var(--secundary-color-hover);
+}
+
+.page__dropdown__menu {
+    position: absolute;
+    display: none;
+    border: solid;
+    border-width: 1px;
+    border-color: var(--secundary-color-hover);
+    z-index: 11000;
+}
+
+.page__dropdown__option {
+    display: block;
+    width: 100%;
+    border: none;
+    text-align: left;
+    background-color: var(--secundary-color);
+    color: var(--neutral-color);
+    font-family: var(--text-font);
+}
+
+.page__dropdown__option:hover {
+    background-color: var(--secundary-color-hover);
+}
+
+
 .page__card {
     display: flex;
     flex-direction: column;
